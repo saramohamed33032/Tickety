@@ -1,0 +1,75 @@
+﻿@model List<Match>
+@{
+    ViewBag.Title = "Index";
+}
+
+<main>
+    <section class="ticktSection">
+        <h3 class="text-center mt-4 mb-2">Ticket</h3>
+        @foreach (var item in Model)
+        {
+            <div class="ticket container small mb-2">
+
+                <h5 class="text-center pt-3 mb-2">@item.Staduim.staduimName </h5>
+                <div>
+                    <span class="mb-2">@item.matchDate.Date.ToString("yyyy-MM-dd")</span>&ensp; , &ensp; <span class="mb-2">@item.matchTime</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-lg-3">
+                        @*Logo Team1*@
+                        <img class="logoTick1" src="~/img/@item.HomeTeam.teamLogo" />
+                    </div>
+                    @*Team1 name*@
+                    <div class="col-md-2 col-sm-3 mt-4 col-lg-2">
+                        @item.HomeTeam.teamName
+                    </div>
+                    <div class="verticalLine col-1">
+                    </div>
+                    @*Team2 name*@
+                    <div class="col-md-2 col-sm-3 mt-4 col-lg-2">
+                        @item.GuestTeam.teamName
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-lg-3">
+                        @*Logo Team2*@
+                        <img class="logoTick1" src="~/img/@item.GuestTeam.teamLogo" />
+                    </div>
+                </div>
+                @*buy button*@
+                <div class="pb-3 pt-2">
+                    @*<a class="btn-lg detailsBtn" href="/home/ticketDetails">Details</a>*@
+                    @Html.ActionLink("Details", "ticketDetails", new { id = item.matchID }, new { @class = "btn-lg detailsBtn" })
+                </div>
+            </div>
+        }
+    </section>
+    <ul id="pagin"><span class="noSpan">No. Of page</span></ul>
+</main>
+@section scripts{
+    <script>
+        pageSize = 5;
+        var pageCount = $(".ticket").length / pageSize;
+
+        for (var i = 0; i < pageCount; i++) {
+
+            $("#pagin").append('<li><a href="#">' + (i + 1) + '</a></li> ');
+}
+        /**/
+        /**/
+        $("#pagin li").first().find("a").addClass("current")
+        showPage = function (page) {
+            $(".ticket").hide();
+            $(".ticket").each(function (n) {
+                if (n >= pageSize * (page - 1) && n < pageSize * page)
+                    $(this).show();
+            });
+        }
+
+        showPage(1);
+
+        $("#pagin li a").click(function () {
+            $("#pagin li a").removeClass("current");
+            $(this).addClass("current");
+            showPage(parseInt($(this).text()))
+        });
+    </script>
+}

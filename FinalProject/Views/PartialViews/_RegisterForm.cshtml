@@ -1,0 +1,78 @@
+﻿@model  FinalProject.Models.ViewModels.IndexVM
+
+@*@using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions { HttpMethod = "POST", AllowCache = false,OnSuccess="" }, new { @class = "form-horizontal", role = "form" }*@
+<section id="Activmodel">
+<div class="modal fade" id="exampleModal1"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold " id="exampleModalLabel">Sign Up</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"id="test">
+                @using (Ajax.BeginForm("Register", "Account",null, new AjaxOptions() { HttpMethod="POST",Confirm="AreYou Sure",InsertionMode=InsertionMode.Replace,UpdateTargetId="test"}, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @*@Html.ValidationSummary("", new { @class = "text-danger" })*@
+                    <div class="container-fluid">
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                @Html.TextBoxFor(m => m.RegisterViewModel.Frist_Name, new { @class = "form-control my-2", placeholder = "Frist Name" })
+                                @Html.ValidationMessageFor(m => m.RegisterViewModel.Frist_Name, null, new { @class = "text-danger " })
+
+                            </div>
+                            <div class="form-group col-12">
+                                @Html.TextBoxFor(m => m.RegisterViewModel.Last_Name, new { @class = "form-control my-2", placeholder = "Family Name" })
+                                @Html.ValidationMessageFor(m => m.RegisterViewModel.Last_Name, null, new { @class = "text-danger" })
+
+                            </div>
+                            <div class="form-group col-12">
+                                @Html.TextBoxFor(m => m.RegisterViewModel.Email, new { @class = "form-control my-2", placeholder = "Email" })
+                                @Html.ValidationMessageFor(m => m.RegisterViewModel.Email, null, new { @class = "text-danger" })
+
+                            </div>
+                            <div class="form-group col-12">
+                                @Html.PasswordFor(m => m.RegisterViewModel.Password, new { @class = "form-control my-2", placeholder = "Password" })
+                                @Html.ValidationMessageFor(m => m.RegisterViewModel.Password, null, new { @class = "text-danger" })
+
+                            </div>
+                            <div class="form-group col-12">
+                                @Html.PasswordFor(m => m.RegisterViewModel.ConfirmPassword, new { @class = "form-control my-2", placeholder = "Confirm Password" })
+                                @Html.ValidationMessageFor(m => m.RegisterViewModel.ConfirmPassword, null, new { @class = "text-danger" })
+
+                            </div>
+                            <div class="form-group col-12">
+                                @Html.EnumDropDownListFor(m => m.RegisterViewModel.gender, "Select-Gender", new { @class = "form-control my-2 ", Style = "max-width: 350px" })
+                                @Html.ValidationMessageFor(m => m.RegisterViewModel.gender, null, new { @class = "text-danger" })
+
+                            </div>
+                            <div class="form-group col-12 ">
+                                <div class="col-md-offset-2 col-md-10 justify-content-end">
+                                    <input type="submit" class="btn btn-info px-5" value="Register" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+            @*<div class="modal-footer text-center">
+                    @Html.ActionLink("Sign IN", "Register", "Account", null, new { @class = "btn btn-primary  px-5" })
+                    <button type="button" class="btn btn-primary  px-5">Sign IN</button>
+                </div>*@
+        </div>
+    </div>
+</div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+    function Showlogin() {
+        $("#exampleModal1").modal('toggle')
+    }
+    </script>
+}

@@ -1,0 +1,12 @@
+﻿<div>
+    @ViewBag.Msg
+</div>
+@if (@TempData["msg"] != null)
+{
+
+<div class="text-success alert-info">
+    @TempData["msg"]
+    @Html.ActionLink("Back", "profile", "Applicationusers")
+    @Html.ActionLink("Home", "index", "Home")
+</div>
+}

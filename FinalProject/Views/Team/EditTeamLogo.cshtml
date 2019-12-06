@@ -1,0 +1,60 @@
+﻿@model Team
+@{
+    /**/
+
+    ViewBag.Title = "Edit Team Logo";
+}
+
+
+<section class="AddTeam ">
+        <div class="container">
+            <div>
+                <h1 class=" text-center font-weight-bold text-uppercase">Edit Logo</h1>
+
+            </div>
+            <div class="col-6 offset-3 mt-5">
+                 @using (Html.BeginForm("EditTeam", "Team", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            
+                <div class="row">
+                    @Html.HiddenFor(model => model.teamID)
+                    <div class="form-group col-12 mt-2">
+                        @Html.LabelFor(a => a.teamLogo, "Logo Of Team", htmlAttributes: new { @class = "control-label col-12 lead font-weight-bold" })
+                        <div class="custom-file col-12">
+                            @Html.TextBoxFor(a => a.teamLogo, new { type = "file", @class = "custom-file-input custom-control ", id = "teamLogo", value = Model.teamLogo, name = "teamLogo" })
+                            <i class="fa fa-check text-muted" id="Lfa" hidden></i>
+                            <label class="custom-file-label" for="teamLogo" id="lblPath">Choose file</label>
+                            @Html.ValidationMessageFor(a => a.teamLogo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-12 mt-2">
+                        <button type="submit" class="btn btn-primary px-5 mt-1">Edit</button>
+                        @Html.ActionLink("Return To Teams", "Index", null, new { @class = "btn btn-primary px-2 mt-1" })
+                        @ViewBag.sameTeam
+                    </div>
+                </div>
+            
+        }
+            </div>
+
+        </div>
+
+    </section>
+
+
+ً@section scripts{
+    <script>
+
+
+        $("#teamLogo").change(function () {
+            if ($("#teamLogo").valid())
+            {
+                $("#Lfa").removeAttr("hidden")
+                $("#lblPath").text($(this).val())
+            }
+            else
+                $("#Lfa").attr("hidden", "hidden")
+        })
+    </script>
+}

@@ -1,0 +1,516 @@
+﻿@model  FinalProject.Models.ViewModels.IndexVM
+@{
+    ViewBag.Title = "Home Page";
+}
+<section class="Top-divteam">
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="divteam col-lg-6 offset-lg-3 text-center text-white p-5 offset-1 col-10">
+
+                <p class="h1 font-weight-bold text-uppercase">Tickety</p>
+                <p class="h3  text-capitalize">We Hope Help You </p>
+                <p class="lead">
+                    Tickety is your way to enjoy your favorite matches and events.
+                    Through our portal, fans are allowed to register themselves to get a Fan ID by
+                   
+                </p>
+                @if (!Request.IsAuthenticated)
+                {
+                    @*<a class="btn   py-2 px-5 m-2  lead" data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-sign-in-alt"></i><span class="p-2">LOGIN</span></a>
+
+                    <a class="btn   py-2 px-5 m-2  lead " data-toggle="modal" data-target="#exampleModal1"><i class="fas fa-user-lock"></i><span class="p-2">Register</span></a>*@
+               
+                    }
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="TeamLogo">
+    <div class="container-fluid">
+        <div>
+            <p class="h1 text-center text-uppercase mb-5">Teams</p>
+
+        </div>
+
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+
+                    <div class="row ">
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/ahly.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Ahly</h5></a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/zamalek.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Zamalek</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/aswan.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Aswan</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/dgla.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Degla</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/elgesh.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Elgesh</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/elhdod.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Elhdod</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="carousel-item ">
+
+                    <div class="row ">
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/enpi.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Enpi</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/entag.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Entag</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/gona.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Gona</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/ismaaly.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Ismaaly</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/itihad.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Itihad</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/masrfc.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Masrfc</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="carousel-item ">
+
+                    <div class="row ">
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/masry.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Masry</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/mkawlon.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Mkawlon</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/mksa.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Mksa</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/pyramids.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Pyramids</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/smoha.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Smoha</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-2 col-4 text-center ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a> <img src="~/img/club/tanta.png" /></a>
+                                </div>
+                                <div class="card-body">
+                                    <a><h5 class="card-title">Tanta</h5></a>
+                                    @*<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Details</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+</section>
+<section class="DivFasel">
+    <div class="container">
+
+        <div class="row">
+
+
+            <div class="vl col-1">
+            </div>
+
+            <div class="v2 col-1 offset-10">
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+     
+
+
+
+</section>
+
+
+<section class="Tickets">
+
+    <div class="container">
+        <div>
+            <p class="h1 text-center text-uppercase m-5">Event Coming </p>
+
+        </div>
+        <div class="row ">
+            <div class="col-md-4 col-6">
+
+                <div class="card" style="width: 20rem;">
+                    <div class="img-card">
+                        <img class="card-img-top" src="~/img/club/ahly.png" alt="Card image cap">
+                        <img class="card-img-top" src="~/img/club/zamalek.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text h4 m-2">Ahli Vs Zamalek</p>
+                        @*<a href="/BuyTicket/Index" class="btn px-4 mt-3">Buy Tickets</a>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6 ">
+
+                <div class="card" style="width: 20rem;  ">
+                    <div class="img-card">
+                        <img class="card-img-top" src="~/img/club/aswan.png" alt="Card image cap">
+                        <img class="card-img-top" src="~/img/club/dgla.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text h4 m-2">Aswan Vs Degla</p>
+                        @*<a href="/BuyTicket/Index" class="btn px-4 mt-3">Buy Tickets</a>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6 ">
+
+                <div class="card" style="width: 20rem;  ">
+                    <div class="img-card">
+                        <img class="card-img-top" src="~/img/club/elgesh.png" alt="Card image cap">
+                        <img class="card-img-top" src="~/img/club/elhdod.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text h4 m-2">Elgesh Vs Elhdod</p>
+                        @*<a href="/BuyTicket/Index" class="btn px-4 mt-3">Buy Tickets</a>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-center m-3">
+            <a href="/BuyTicket/Index" class="btn  px-5 my-5 ">View More</a>
+
+        </div>
+
+    </div>
+
+
+
+</section>
+
+<section class="Posts">
+    <div class="container-fluid">
+        <div class="heading">
+            <p class="text-center h1 text-uppercase p-5">Recent News</p>
+        </div>
+        <div class="row no-gutters">
+
+            <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <img class="card-img-top" src="~/img/img10-94x71.jpg" alt="Card image cap">
+            </div>
+            <div class="card tex col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="card-body">
+                    <a>May, 04th 2019</a>
+                    <h5 class="card-title">Blog Post1</h5>
+                    <p class="card-text">Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
+                </div>
+            </div>
+            <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <img class="card-img-top" src="~/img/img5.jpg" alt="Card image cap">
+            </div>
+            <div class="card tex col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="card-body">
+                    <a>May, 04th 2019</a>
+                    <h5 class="card-title">Blog Post2</h5>
+                    <p class="card-text">Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="card tex col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="card-body">
+                    <a>May, 04th 2019</a>
+                    <h5 class="card-title">Blog Post3</h5>
+                    <p class="card-text">Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
+                </div>
+            </div>
+
+            <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <img class="card-img-top" src="~/img/img6.jpg" alt="Card image cap">
+            </div>
+
+
+            <div class="card tex col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="card-body">
+                    <a>May, 04th 2019</a>
+                    <h5 class="card-title">Blog Post4</h5>
+                    <p class="card-text">Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
+                </div>
+            </div>
+
+            <div class="card col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <img class="card-img-top" src="~/img/img7-94x71.jpg" alt="Card image cap">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</section>

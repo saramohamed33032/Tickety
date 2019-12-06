@@ -1,0 +1,82 @@
+﻿@model Degree
+@{
+    ViewBag.Title = "ticket Details";
+}
+
+<section class="TickDetails">
+    <h3 class="text-center tdHead">Ticket Details</h3>
+    @using (Html.BeginForm("Pay", "BuyTicket", FormMethod.Get))
+    {
+        @Html.AntiForgeryToken()
+    <div class="container ticketDetails">
+        <div class="row offset-1 teamRow">
+            @Html.HiddenFor(a=>a.matchID)
+            @*team1 Logo*@
+            <img class="team1 col-md-2 col-xs-1 col-lg-2 logo" src="~/img/@Model.Match.HomeTeam.teamLogo" />
+            @*team1 Name*@
+            <div class="col-md-3  mt-4 col-xs-2 col-lg-3 ml-1 mr-4">@Model.Match.HomeTeam.teamName</div>
+            @*team2 Logo*@
+            <img class="team2 col-md-2 col-xs-1 col-lg-2 logo" src="~/img/@Model.Match.GuestTeam.teamLogo" />
+            @*team2 Name*@
+            <div class="col-md-3  mt-4 col-xs-2 col-lg-3 ">@Model.Match.GuestTeam.teamName</div>
+        </div>
+        <div class="row offset-1 mt-4 mb-4 st-clRow">
+            @*stadium Logo*@
+            <img class="stLogo col-md-2 col-xs-1 col-lg-2 " src="~/images/stadium.png" />
+            @*Stadium Name*@
+            <span class="col-md-3 col-xs-2 col-lg-3 mt-4 mr-4">@Model.Match.Staduim.staduimName</span>
+            @*calendar Logo*@
+            <img class="caLogo col-md-2 col-xs-1 col-lg-2 mt-3" src="~/images/calendar.png" />
+            @*calendar name*@
+            <span class="col-md-3 col-xs-2 col-lg-3 mt-4">@Model.Match.matchDate.Date.ToString("yyyy-MM-dd") | @Model.Match.matchTime</span>
+        </div>
+        <div class="alert-dark  mb-4 w-75 ml-5 text-center txt"> choose degree which you want</div>
+        <div class="TicketTable">
+            <!--Table-->
+            <table class="table w-100">
+                <!--Table head-->
+                <thead>
+                    <tr>
+                        <th class="th w-25">choose</th>
+                        <th class="th w-25">Degree</th>
+                        <th class="th w-25">Price</th>
+                    </tr>
+                </thead>
+                <!--Table head-->
+                <!--Table body-->
+                <tbody>
+                    <tr>
+                        <td id="ra1" scope="row">
+                            <input class="text-center" type="radio" value="A" name="ticketClass" />
+                        </td>
+                        <td>A</td>
+                        <td>@ViewBag.classA</td>
+                    </tr>
+                    <tr>
+                        <td id="ra2" scope="row">
+                            <input class="text-center" type="radio" value="B" name="ticketClass" />
+                        </td>
+                        <td>B</td>
+                        <td>@ViewBag.classB</td>
+                    </tr>
+                    <tr>
+                        <td id="ra3" scope="row">
+                            <input class="justify-content-center" type="radio" value="C" name="ticketClass" />
+                        </td>
+                        <td>c</td>
+                        <td>@ViewBag.classC</td>
+                    </tr>
+                    @Html.ValidationMessageFor(a => a.ticketClass, "", new { @class= "text-danger" })
+                </tbody>
+                <!--Table body-->
+            </table>
+            <!--Table-->
+        </div>
+        <div class="pb-5 text-center">
+            <button class="btn-lg buyBtn" type="submit" >Buy</button>
+            <br /><h4 class="text-danger">@TempData["message"]</h4>
+            @*@Html.ActionLink("Buy", "Buy", new { matchID=Model.Match.matchID,ticketClass=}, new { @class= "btn-lg buyBtn" })*@
+        </div>
+    </div>
+    }
+</section>

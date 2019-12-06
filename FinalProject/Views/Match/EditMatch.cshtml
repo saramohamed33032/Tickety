@@ -1,0 +1,99 @@
+﻿@model Match
+@{
+    ViewBag.Title = "AddMatch";
+}
+
+
+
+<section class="AddTeam ">
+    <div class="container">
+        <div>
+            <h1 class=" text-center font-weight-bold text-uppercase">Edit Match</h1>
+
+        </div>
+        <div class="col-6 offset-3 mt-5">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    @Html.HiddenFor(model => model.matchID)
+                    @Html.HiddenFor(model => model.HomeTeamId)
+                    @Html.HiddenFor(model => model.GuestTeamId)
+                    <div class="form-group col-12 mt-2">
+                       
+                        @Html.LabelFor(a => a.staduimID, "Staduim Name", htmlAttributes: new { @class = "control-label " })
+                        @Html.DropDownList("staduimID", null, htmlAttributes: new { @class = "form-control col-12" })
+                        @Html.ValidationMessageFor(a => a.staduimID, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-12 mt-2">
+                       @Html.LabelFor(a => a.matchDate, "Match Date", htmlAttributes: new { @class = "control-label " })
+                    <input type="date" name="matchDate" value="@Model.matchDate.Date.ToString("yyyy-MM-dd")" class="form-control col-12" />
+                    @Html.ValidationMessageFor(a => a.matchDate, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-12 mt-2">
+                        @Html.LabelFor(a => a.matchTime, "Match Time", htmlAttributes: new { @class = "control-label " })
+                        <input type="time" name="matchTime" value="@Model.matchTime" class="form-control col-12" />
+                        @Html.ValidationMessageFor(a => a.matchTime, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-12 mt-2">
+                        <button type="submit" class="btn btn-primary px-5" id="btn">Edit</button>
+                        @Html.ActionLink("Return To Matches", "Index", null, new { @class = "btn btn-info my-1 px-3 " })
+                        @ViewBag.msg
+                    </div>
+
+                   
+
+
+
+                </div>
+
+            }
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+@*<section class="container mb-5">
+    <h2 class="text-center mt-5 ">Edit Match</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="container ">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger", id = "fo" })
+            <div class="row">
+                @Html.HiddenFor(model => model.matchID)
+                @Html.HiddenFor(model => model.HomeTeamId)
+                @Html.HiddenFor(model => model.GuestTeamId)
+                <div class="form-group col-12">
+                    @Html.LabelFor(a => a.staduimID, "Staduim Name", htmlAttributes: new { @class = "control-label " })
+                    @Html.DropDownList("staduimID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(a => a.staduimID, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-12">
+                    @Html.LabelFor(a => a.matchDate, "Match Date", htmlAttributes: new { @class = "control-label " })
+                    <input type="date" name="matchDate" value="@Model.matchDate.Date.ToString("yyyy-MM-dd")" class="form-control" />
+                    @Html.ValidationMessageFor(a => a.matchDate, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-12">
+                    @Html.LabelFor(a => a.matchTime, "Match Time", htmlAttributes: new { @class = "control-label " })
+                    <input type="time" name="matchTime" value="@Model.matchTime" class="form-control" />
+                    @Html.ValidationMessageFor(a => a.matchTime, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-12">
+                    <button type="submit" class="btn btn-primary px-5" id="btn">Edit</button>
+                    @ViewBag.msg
+                </div>
+            </div>
+        </div>
+    }
+    </section>*@

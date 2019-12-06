@@ -1,0 +1,100 @@
+﻿
+@model  FinalProject.Models.ViewModels.IndexVM
+    @{ 
+        Layout = "~/Views/Shared/_Layout.cshtml";
+     }
+<div class="modal fade" id="exampleModal11" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content LoginModal">
+            <div class="modal-header text-center">
+            @if(!User.Identity.IsAuthenticated)
+            {
+
+                <h4 class="modal-title w-100 font-weight-bold " id="exampleModalLabel"><i class="fas fa-sign-in-alt"></i><span class="p-2">LOGIN</span></h4>
+            }
+                <div style="display:none;color:#808080" id="Regicon">
+                    <i class="fas fa-spinner fa-pulse"></i>
+                </div>
+                <a href="@Url.Action("Index","Home")" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <div class="modal-body">
+                @{
+                    if (!User.Identity.IsAuthenticated)
+                    {
+                        using (Ajax.BeginForm("Login", "Account", null, new AjaxOptions() { HttpMethod = "POST", LoadingElementId = "Regicon", OnSuccess = "closeform()", OnFailure = "openform()" }, new { @class = "", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                <span> @Html.ValidationSummary(true, "", new { @class = "text-danger" })</span>
+                            if (ViewBag.message != null)
+                            {
+
+                                <div class="alert alert-success">@ViewBag.message</div>
+                            }
+                            if (TempData["errorMsg"] != null)
+                            {
+
+                                <div class="alert alert-danger">@ViewBag.errormsg</div>
+                            }
+                            <div class="form-group col-12">
+
+                                @Html.LabelFor(m => m.LoginViewModel.Email, new { @class = "editlable col-md-2 control-label d-inline text-sm-left" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.LoginViewModel.Email, new { @class = "form-control" })
+
+                                    @Html.ValidationMessageFor(m => m.LoginViewModel.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                @Html.LabelFor(m => m.LoginViewModel.Password, new { @class = "editlable col-md-2 control-label d-inline text-sm-left" })
+                                <div class="col-md-10">
+                                    @Html.PasswordFor(m => m.LoginViewModel.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.LoginViewModel.Password, "", new { @class = "text-danger" })
+                                    @Html.ValidationMessage("")
+                                </div>
+                            </div>
+                            <div class="form-group col-12">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <div class="checkbox">
+                                        @Html.CheckBoxFor(m => m.LoginViewModel.RememberMe)
+                                        @Html.LabelFor(m => m.LoginViewModel.RememberMe)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-12 mb-3">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Log in" class="btn loginbtn ml-2" />
+                                </div>
+                            </div>
+
+                            <div class="mb-2 mt-3 border-top">
+                                @Ajax.ActionLink("Register A New User", "Register", "Account", null,
+                                                                      new AjaxOptions() { UpdateTargetId = "Activpopup", InsertionMode = InsertionMode.Replace, OnSuccess = "openform()", HttpMethod = "GET", LoadingElementId = "icoon" },
+                                                                      new { @class = "linkReg ml-4" })
+
+                            </div>
+
+                            <div class="mt-3">
+                                @Html.ActionLink("Forgot your password?", "ForgotPassword", null, new { @class = "linkFor ml-4" })
+                            </div>
+
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-success text-secondary">Welcom  @User.Identity.Name </div>
+                        <a class="nav-link " href="@Url.Action("Index","Home")"><span class="p-2 btn btn-success">Home</span></a>
+                    }
+                }
+            </div>
+        </div>
+
+    </div>
+</div>
+@section scripts{
+    <script>
+        $("#exampleModal11").modal("show")
+        $("#contact").addClass("d-none")
+    </script>
+}

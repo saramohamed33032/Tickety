@@ -1,0 +1,291 @@
+C:\Users\SaeeD\source\repos\FinalProject\bin\FinalProject.dll.config
+C:\Users\SaeeD\source\repos\FinalProject\bin\FinalProject.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\FinalProject.pdb
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\csc.exe
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\csc.exe.config
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\csc.rsp
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\csi.exe
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\csi.exe.config
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\csi.rsp
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.AppContext.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Console.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.IO.Pipes.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Security.Claims.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\vbc.exe
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\vbc.exe.config
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\vbc.rsp
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\SaeeD\source\repos\FinalProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\SaeeD\source\repos\FinalProject\bin\Antlr3.Runtime.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\EntityFramework.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\EntityFramework.SqlServer.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Newtonsoft.Json.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Owin.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.Helpers.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.Mvc.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.Optimization.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.Razor.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.WebPages.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\WebGrease.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.Helpers.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.Mvc.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.Optimization.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.Razor.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.WebPages.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Newtonsoft.Json.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Antlr3.Runtime.pdb
+C:\Users\SaeeD\source\repos\FinalProject\bin\EntityFramework.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\EntityFramework.SqlServer.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.csprojAssemblyReference.cache
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.dll
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.Migrations.Inital.resources
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.Migrations.EditNames.resources
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.Migrations.editclass.resources
+C:\Users\SaeeD\source\repos\FinalProject\bin\Rotativa.dll
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.Migrations.Final.resources
+C:\Users\SaeeD\source\repos\FinalProject\obj\Debug\FinalProject.Migrations.FF.resources
+C:\Users\SaeeD\source\repos\FinalProject\bin\Stripe.net.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Stripe.net.pdb
+C:\Users\SaeeD\source\repos\FinalProject\bin\Stripe.net.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Twilio.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Twilio.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\QRCoder.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Drawing.Common.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Buffers.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Memory.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Numerics.Vectors.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Text.Encodings.Web.dll
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Buffers.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Memory.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Numerics.Vectors.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SaeeD\source\repos\FinalProject\bin\System.Text.Encodings.Web.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\FinalProject.dll.config
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\FinalProject.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\FinalProject.pdb
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\csc.exe
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\csc.exe.config
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\csc.rsp
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\csi.exe
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\csi.exe.config
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\csi.rsp
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.AppContext.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Console.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.IO.Pipes.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Security.Claims.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\vbc.exe
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\vbc.exe.config
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\vbc.rsp
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Antlr3.Runtime.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\EntityFramework.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\EntityFramework.SqlServer.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Newtonsoft.Json.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Owin.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\QRCoder.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Rotativa.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Stripe.net.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Buffers.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Drawing.Common.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Memory.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Numerics.Vectors.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Text.Encodings.Web.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.Helpers.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.Mvc.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.Optimization.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.Razor.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.WebPages.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Twilio.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\WebGrease.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Stripe.net.pdb
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Stripe.net.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Buffers.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Memory.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Numerics.Vectors.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Text.Encodings.Web.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.Helpers.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.Mvc.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.Optimization.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.Razor.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.WebPages.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Newtonsoft.Json.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Twilio.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Antlr3.Runtime.pdb
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\EntityFramework.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\EntityFramework.SqlServer.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.csprojAssemblyReference.cache
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.Migrations.Inital.resources
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.Migrations.EditNames.resources
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.Migrations.editclass.resources
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.Migrations.Final.resources
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.Migrations.FF.resources
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.dll
+C:\Users\sara mohamed\Downloads\FinalP\FinalProject\obj\Debug\FinalProject.pdb

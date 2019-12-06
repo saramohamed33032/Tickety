@@ -1,0 +1,82 @@
+﻿@model List<Team>
+@{
+    ViewBag.Title = "Teams";
+}
+
+
+
+
+    <section class="AddTeam">
+        <div class="container">
+
+            <h1 class=" text-center font-weight-bold text-uppercase">Teams</h1>
+            @if (User.IsInRole("MasterAdmin") || User.IsInRole("Admin"))
+            {
+                @Html.ActionLink("Add Team", "AddTeam", null, new { @class = "btn btn-info my-3 px-5" })
+                @Html.ActionLink("Deleted  Teams", "UnVisibleTeam", null, new { @class = "btn btn-info m-3 px-3 " })
+            }
+            <table class="table table-hover">
+                <thead class="">
+                    <tr class="font-weight-bold text-center">
+                        <td>Team Name</td>
+                        <td>Team Logo</td>
+                        @if (User.IsInRole("MasterAdmin") || User.IsInRole("Admin"))
+                        {
+                            <td>Active</td>
+                            <td class="text-center">Actions</td>
+                        }
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-center team">
+                            <td>@Html.DisplayFor(a => item.teamName)</td>
+                            <td><img src="~/img/@item.teamLogo" style="height:5rem; width:5rem;" /></td>
+                            @if (User.IsInRole("MasterAdmin") || User.IsInRole("Admin"))
+                            {
+                                <td><i class="fa fa-check text-muted ml-3"></i></td>
+                                <td class=" text-center">
+                                    @Html.ActionLink("Delete", "DeleteTeam", new { id = item.teamID }, new { @class = "btn btn-danger m-1 px-3" })
+                                    @Html.ActionLink("EditName", "EditTeamName", new { id = item.teamID }, new { @class = "btn btn-info m-1 px-2" })
+                                    @Html.ActionLink("EditLogo", "EditTeamLogo", new { id = item.teamID }, new { @class = "btn btn-info m-1 px-2" })
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        <ul id="pagin"><span class="noSpan">No. Of page</span></ul>
+    </section>
+@section scripts{
+    <script>
+        pageSize = 5;
+        var pageCount = $(".team").length / pageSize;
+
+        for (var i = 0; i < pageCount; i++) {
+
+            $("#pagin").append('<li><a href="#">' + (i + 1) + '</a></li> ');
+}
+        /**/
+        /**/
+        $("#pagin li").first().find("a").addClass("current")
+        showPage = function (page) {
+            $(".team").hide();
+            $(".team").each(function (n) {
+                if (n >= pageSize * (page - 1) && n < pageSize * page)
+                    $(this).show();
+            });
+        }
+
+        showPage(1);
+
+        $("#pagin li a").click(function () {
+            $("#pagin li a").removeClass("current");
+            $(this).addClass("current");
+            showPage(parseInt($(this).text()))
+        });
+    </script>
+}

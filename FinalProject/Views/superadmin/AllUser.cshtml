@@ -1,0 +1,92 @@
+﻿@model IEnumerable<FinalProject.Models.ApplicationUser>
+
+@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.EntityFramework;
+
+@{
+    ViewBag.Title = "AllUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AllUser</h2>
+<section class="userSec">
+    <h3 class="text-center">Users</h3>
+    <div class="col-9 test">
+        <table id="example" class="table table-responsive lead" style="width:100%">
+            <thead class="thead-dark">
+                <tr>
+                    <th>UserName</th>
+                    <th>Email</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+                @foreach (var item in Model)
+                {
+                    var context = new ApplicationDbContext();
+                    var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+                    var userrole = item.Roles.FirstOrDefault();
+                    if (userManager.IsInRole(item.Id, "Admin"))
+                    {
+                        <tr class="table-light users">
+                            <td>@item.UserName</td>
+                            @*<td class="w-25">@userManager.GetRoles(item.Id).FirstOrDefault().ToString()</td>*@
+                            <td>@item.Email</td>
+                            <td>
+                                @Html.ActionLink("Make User", "OperationUser", "SuperAdmin", new { id = item.Id }, new { @class = "btn btn-danger", onclick = "return confirm('are you sure You Want To Remove Admin? ')" })
+
+
+                            </td>
+                        </tr>
+                    }
+                    if (userManager.IsInRole(item.Id, "user"))
+                    {
+                        <tr class="table-light users">
+                            <td>@item.UserName</td>
+                            @*<td class="w-25">@userManager.GetRoles(item.Id).FirstOrDefault().ToString()</td>*@
+                            <td>@item.Email</td>
+                            <td>
+
+                                @Html.ActionLink("Make Admin", "OperationUser", "SuperAdmin", new { id = item.Id }, new { @class = "btn btn-danger", onclick = "return confirm('are you sure You Want To Make Admin? ')" })
+
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <ul id="pagin"><span class="noSpan">No. Of page</span></ul>
+</section>
+
+@section scripts{
+    <script>
+        pageSize = 5;
+        var pageCount = $(".users").length / pageSize;
+
+        for (var i = 0; i < pageCount; i++) {
+
+            $("#pagin").append('<li><a href="#">' + (i + 1) + '</a></li> ');
+        }
+        /**/
+        /**/
+        $("#pagin li").first().find("a").addClass("current")
+        showPage = function (page) {
+            $(".users").hide();
+            $(".users").each(function (n) {
+                if (n >= pageSize * (page - 1) && n < pageSize * page)
+                    $(this).show();
+            });
+        }
+
+        showPage(1);
+
+        $("#pagin li a").click(function () {
+            $("#pagin li a").removeClass("current");
+            $(this).addClass("current");
+            showPage(parseInt($(this).text()))
+        });
+    </script>
+}

@@ -1,0 +1,86 @@
+﻿@model  FinalProject.Models.ViewModels.IndexVM
+<div class="modal-content">
+    <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold " id="exampleModalLabel"><i class="fas fa-user-lock"></i><span class="p-2">Sign Up</span></h4>
+        <div style="display:none;color:#808080" id="Regicon">
+            <i class="fas fa-spinner fa-pulse"></i>
+        </div>
+        <a href="@Url.Action("Index","Home")" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        @using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions() { HttpMethod = "POST", LoadingElementId = "Regicon", UpdateTargetId = "Activpopup", InsertionMode = InsertionMode.Replace }, new { @class = "form-horizontal", role = "form" }))
+        {
+            @*@Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new { @class = "text-danger" })*@
+            if (ViewBag.message != null)
+            {
+                <div class="alert alert-success">@ViewBag.message</div>
+            }
+            if (ViewBag.message != null)
+            {
+                <div class="alert alert-warning">@ViewBag.message</div>
+            }
+            <div class="container-fluid">
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        @Html.LabelFor(m => m.RegisterViewModel.Frist_Name, new { @class = "editlable d-inline col-md-2 control-label text-sm-center" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.RegisterViewModel.Frist_Name, new { @class = "form-control" })
+
+                            @Html.ValidationMessageFor(m => m.RegisterViewModel.Frist_Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        @Html.LabelFor(m => m.RegisterViewModel.Username, new { @class = "editlable d-inline col-md-2 control-label text-sm-left" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.RegisterViewModel.Username, new { @class = "form-control" })
+
+                            @Html.ValidationMessageFor(m => m.RegisterViewModel.Username, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        @Html.LabelFor(m => m.RegisterViewModel.Email, new { @class = "editlable col-md-2 control-label d-inline text-sm-left" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.RegisterViewModel.Email, new { @class = "form-control d-inline" })
+
+                            @Html.ValidationMessageFor(m => m.RegisterViewModel.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        @Html.LabelFor(m => m.RegisterViewModel.Password, new { @class = "editlable col-md-2 control-label d-inline text-sm-left" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.RegisterViewModel.Password, new { @class = "form-control" })
+
+                            @Html.ValidationMessageFor(m => m.RegisterViewModel.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        @Html.LabelFor(m => m.RegisterViewModel.ConfirmPassword, new { @class = "editlable col-md-2 control-label d-inline text-sm-left" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.RegisterViewModel.ConfirmPassword, new { @class = "form-control" })
+
+                            @Html.ValidationMessageFor(m => m.RegisterViewModel.ConfirmPassword, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        @Html.LabelFor(m => m.RegisterViewModel.gender, new { @class = "editlable col-md-2 control-label d-inline text-sm-left" })
+                        <div class="col-md-10">
+                            @Html.EnumDropDownListFor(m => m.RegisterViewModel.gender, "Select-Gender", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.RegisterViewModel.gender, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group col-12 ">
+                        <div class="col-md-offset-2  col-md-10 justify-content-end">
+                            <input type="submit" class="btn loginbtn px-5" value="Register" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

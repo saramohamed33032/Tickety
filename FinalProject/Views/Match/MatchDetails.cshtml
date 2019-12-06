@@ -1,0 +1,98 @@
+﻿@model FinalProject.Models.ViewModels.MatchDegreeVM
+@{
+    ViewBag.Title = "Match Details";
+}
+
+<section class="AddTeam">
+    <div class="container">
+        <div>
+            <h2 class=" text-center font-weight-bold text-uppercase ">Match Details</h2>
+        </div>
+        <div class="row">
+            <div class="form-group col-12 mt-5">
+
+                @Html.LabelFor(a => a.Match.HomeTeam.teamName, "Home Team : ", htmlAttributes: new { @class = "h4 " })
+                @Html.DisplayFor(a => a.Match.HomeTeam.teamName)
+            </div>
+
+            <div class="form-group col-12">
+                @Html.LabelFor(a => a.Match.GuestTeam.teamName, "Guest Team :", htmlAttributes: new { @class = "control-label h4" })
+                @Html.DisplayFor(a => a.Match.GuestTeam.teamName)
+            </div>
+            <div class="form-group col-12">
+                @Html.LabelFor(a => a.Match.Staduim.staduimName, "Staduim Name :", htmlAttributes: new { @class = "control-label h4" })
+                @Html.DisplayFor(a => a.Match.Staduim.staduimName)
+            </div>
+            <div class="form-group col-12">
+                @Html.LabelFor(a => a.Match.matchDate, "Match Date :", htmlAttributes: new { @class = "control-label h4" })
+                @Model.Match.matchDate.Date.ToString("yyyy-MM-dd")
+            </div>
+            <div class="form-group col-12">
+                @Html.LabelFor(a => a.Match.matchTime, "Match Time :", htmlAttributes: new { @class = "control-label h4" })
+                @Html.DisplayFor(a => a.Match.matchTime)
+            </div>
+            @foreach (var item in Model.Degree)
+            {
+                <div class="form-group col-6 mt-3">
+                    @Html.LabelFor(a => item.ticketClass, "Class", htmlAttributes: new { @class = "control-label h1 font-weight-bold" })
+                    @Html.DisplayFor(a => item.ticketClass)
+                </div>
+                <div class="form-group col-6 mt-3">
+                    <div class=" ">
+                        @Html.LabelFor(a => item.degreePrice, "Price :", htmlAttributes: new { @class = "control-label h4" })
+                        @Html.DisplayFor(a => item.degreePrice)
+                    </div>
+                    <div class="">
+                        @Html.LabelFor(a => item.NO_Seat, "NSeat :", htmlAttributes: new { @class = "control-label h4" })
+                        @Html.DisplayFor(a => item.NO_Seat)
+                    </div>
+                </div>
+            }
+
+            
+        </div>
+    </div>
+</section>
+
+@*<section class="container mb-sm-5">
+
+    <h2 class="mt-5 text-center   ">Match Details</h2>
+    <div class="form-group col-12">
+
+        @Html.LabelFor(a => a.Match.HomeTeam.teamName, "Home Team ", htmlAttributes: new { @class = "h1 " })
+        @Html.DisplayFor(a => a.Match.HomeTeam.teamName)
+    </div>
+    <div class="form-group col-12">
+        @Html.LabelFor(a => a.Match.GuestTeam.teamName, "Guest Team ", htmlAttributes: new { @class = "control-label badge badge-info" })
+        @Html.DisplayFor(a => a.Match.GuestTeam.teamName)
+    </div>
+    <div class="form-group col-12">
+        @Html.LabelFor(a => a.Match.Staduim.staduimName, "Staduim Name ", htmlAttributes: new { @class = "control-label badge badge-info" })
+        @Html.DisplayFor(a => a.Match.Staduim.staduimName)
+    </div>
+    <div class="form-group col-12">
+        @Html.LabelFor(a => a.Match.matchDate, "Match Date ", htmlAttributes: new { @class = "control-label badge badge-info" })
+        @Model.Match.matchDate.Date.ToString("yyyy-MM-dd")
+    </div>
+    <div class="form-group col-12">
+        @Html.LabelFor(a => a.Match.matchTime, "Match Time ", htmlAttributes: new { @class = "control-label badge badge-info" })
+        @Html.DisplayFor(a => a.Match.matchTime)
+    </div>
+    @foreach (var item in Model.Degree)
+    {
+        <div class="form-group col-12">
+            @Html.LabelFor(a => item.ticketClass, "Class", htmlAttributes: new { @class = "control-label badge badge-info" })
+            @Html.DisplayFor(a => item.ticketClass)
+        </div>
+        <div class="form-group col-12">
+            <div class=" col-md-1">
+                @Html.LabelFor(a => item.degreePrice, "Price", htmlAttributes: new { @class = "control-label badge badge-info" })
+                @Html.DisplayFor(a => item.degreePrice)
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(a => item.NO_Seat, "Number Of Seat", htmlAttributes: new { @class = "control-label badge badge-info" })
+                @Html.DisplayFor(a => item.NO_Seat)
+            </div>
+        </div>
+    }
+</section>*@

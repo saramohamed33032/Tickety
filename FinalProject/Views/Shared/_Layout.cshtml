@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>@ViewBag.Title - Tickety Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/table")
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="~/img/park-tickets-couple.png" />
+    <script src="~/Scripts/fontawesome/fontawesome.min.js"></script>
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+
+    <div class="top-header">
+        <div class="container-fluid">
+            <header>
+                <div class="row">
+                    <div class="head-nav ">
+                        <nav class="navbar navbar-expand-lg ">
+                            <button class="navbar-toggler col-3" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="lead py-2"></span>Menu
+                            </button>
+                            <span style="font-size:35px;cursor:pointer " onclick="openNav()" class="text-white mx-2">&#9776;</span>
+                            <div id="mySidenav" class="sidenav ">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <ul class="list-group list-group-flush">
+                                    @{
+                                        <li class="list-group-item "><a class="nav-link " href="@Url.Action("Index","Home")"><span class="p-2">Home</span></a></li>
+                                        if (User.IsInRole("Admin") || User.IsInRole("MasterAdmin"))
+                                        {
+                                            <li class="list-group-item"><a class="nav-link " href="@Url.Action("Index","Team")"><span class="p-2">Teams</span></a></li>
+                                            <li class="list-group-item"><a class="nav-link " href="@Url.Action("Index","Match")"><span class="p-2">Matches</span></a></li>
+                                            if(User.IsInRole("MasterAdmin")){ 
+                                            <li class="list-group-item"><a class="nav-link " href="@Url.Action("Alluser","SuperAdmin")"><span class="p-2">Users</span></a></li>
+                                            }
+
+                                        }
+
+                                        <li class="list-group-item"><a class="nav-link " href="@Url.Action("Index","BuyTicket")"><span class="p-2">Tickets</span></a></li>
+                                        <li class="list-group-item"><a class="nav-link " href="@Url.Action("getAllStadium","Staduims")"><span class="p-2">Stadium Location</span></a></li>
+                                        <li class="list-group-item"><a class="nav-link " href="@Url.Action("index","team")"><span class="p-2">Teams</span></a></li>
+
+                                        <li class="list-group-item"><a class="nav-link " href="@Url.Action("About","Home")"><span class="p-2">About Tickety</span></a></li>
+                                        <li class="list-group-item"><a class="nav-link " href="@Url.Action("contact","home")"><span class="p-2">Contact US</span></a></li>
+                                    }
+                                </ul>
+                            </div>
+                            <a class="navbar-brand " href="@Url.Action("Index","Home")">
+                                <span><img src="~/img/park-tickets-couple.png" /></span>
+                            </a>
+                            <a class="navbar-brand " href="@Url.Action("Index","Home")">
+                                <span class="h1 text-white">TICKETY</span>
+                            </a>
+                            <div class="collapse navbar-collapse justify-content-end pr-3" id="navbarTogglerDemo03">
+                                <ul class="navbar-nav  mt-1 mt-lg-0 ">
+                                    @{
+                                        if (!Request.IsAuthenticated)
+                                        {
+                                            @* Login W Register *@
+                                            <li class="nav-item pr-3">
+
+                                                @*<a class="nav-link " data-toggle="modal" data-target="#exampleModal1"><i class="fas fa-user-lock"></i><span class="p-2">Register</span></a>*@
+                                                @Ajax.ActionLink("Login", "LoginForm", "Account", null, null, null, null, new AjaxOptions() { UpdateTargetId = "Activpopup", LoadingElementId = "icoon", InsertionMode = InsertionMode.Replace, OnSuccess = "openform()", HttpMethod = "POST" }, new { @class = "nav-link p-2" })
+
+                                            </li>
+
+                                            <li class="nav-item pr-3">
+                                                @*<a class="nav-link " data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-sign-in-alt"></i><span class="p-2">LOGIN</span></a>*@
+                                                @Ajax.ActionLink("Register", "Register", "Account", null, null, null, null,
+                                               new AjaxOptions() {  UpdateTargetId = "Activpopup", LoadingElementId = "icoon", InsertionMode = InsertionMode.Replace, OnSuccess = "openform()", HttpMethod = "GET"  },
+                                               new { @class = "nav-link" })
+                                                <div style="display:none;color:#ffffff" id="icoon">
+                                                    <i class="fas fa-spinner fa-pulse"></i>
+                                                </div>
+
+                                            </li>
+
+                                        }
+                                        else
+                                        {
+                                            @* Image With LogOUt *@
+                                            <li class="nav-item pr-3">
+                                                <a class="navbar-brand" href="/applicationusers/profile">
+                                                    <div class="logo-image">
+                                                        <img src='@Url.Action("show","ApplicationUsers")' class="img-fluid">
+
+                                                    </div>
+                                                </a>
+                                                <a class="small text-white" href="/applicationusers/profile">@User.Identity.Name</a>
+
+                                            </li>
+                                            <li class="nav-item pr-3">
+                                                
+                                                @Ajax.ActionLink("LogOut", "Logoff", "Account", null,
+                                              new AjaxOptions() { HttpMethod = "POST", LoadingElementId = "icoon", OnSuccess = "location.reload()", OnFailure = "alert('error')" },
+                                              new { @class = "nav-link" })
+                                            </li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                            
+                        </nav>
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </div>
+    <main>
+        @{
+            if (!Request.IsAuthenticated)
+            {
+                @*@using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions { HttpMethod = "POST", AllowCache = false,OnSuccess="" }, new { @class = "form-horizontal", role = "form" }*@
+                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog" role="document" id="Activpopup">
+
+                    </div>
+                </div>
+
+            }
+        }
+        <a onclick="topFunction()" id="myBtn" title="Go to top">Top</a>
+        @RenderBody()
+    </main>
+    <footer class="">
+
+        <div class="Footer-Div">
+            <div class="over-lay">
+
+
+                <div class="pt-5 pb-4" id="contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                                <div>
+                                    <a class="navbar-brand text-white" href="#">
+
+                                        <h3>Tazkerty</h3>
+
+                                    </a>
+                                    <p class="mb-4 ">Etiam laoreet in ex quis efficitur.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                                    <a class="" style="color:#70b700;">Trusted by <span>500+ People</span></a>
+
+                                    <div>
+                                        <ul class="nav">
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#"><i class="fab fa-whatsapp"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                                <p class="mb-4 font-weight-bold h5 text-white">Quick Links</p>
+                                <div>
+                                    <ul class="recent-post nav">
+                                        <li class="nav-item">
+                                            <i class="fas fa-angle-double-right"></i>
+                                            <span>Rendomised words which dont look eveable.</span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <i class="fas fa-angle-double-right"></i>
+                                            <span>Rendomised words which dont look eveable.</span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <i class="fas fa-angle-double-right"></i>
+                                            <span>Rendomised words which dont look eveable.</span>
+                                        </li>
+                                    </ul>
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                                <p class="mb-4 font-weight-bold h5 text-white">Quick Links</p>
+                                <div>
+
+                                    <ul class="recent-post nav">
+                                        <li class="nav-item">
+                                            <i class="fas fa-angle-double-right"></i>
+                                            <span>Rendomised words which dont look eveable.</span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <i class="fas fa-angle-double-right"></i>
+                                            <span>Rendomised words which dont look eveable.</span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <i class="fas fa-angle-double-right"></i>
+                                            <span>Rendomised words which dont look eveable.</span>
+                                        </li>
+                                    </ul>
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                                <p class="mb-4 font-weight-bold h5 text-white">Quick Links</p>
+                                <div>
+                                    <ul class="recent-post nav">
+                                        <li class="nav-item">
+                                            <i class="fas fa-phone-square"></i>
+                                            <span>+1(12) 123 456 789</span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>90 nsequursu dsdesdc, xxx Honey Street 049436.Newyork, NY..</span>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <i class="fas fa-envelope-square"></i>
+                                            <span>info@example.com</span>
+                                        </li>
+
+                                        <li class="nav-item">
+
+                                            <i class="fas fa-fax"></i>
+                                            <span>+1(12) 123 456 789.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+        <section class="copyright p-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-2 mb-2">
+                        <div class="text-center text-white">
+                            © 2019 Tickety . All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </footer>
+    <script src="~/Scripts/tickpaging.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/popper.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/fontawesome/fontawesome.min.js"></script>
+
+
+
+
+    <script>
+        function Opencolabse1() {
+            $("#collapseOne").collapse("show")
+            $("form").removeData("validator");
+            $("form").removeData("unobtrusiveValidation");
+            $.validator.unobtrusive.parse("form");
+        }
+        function openform() {
+            
+            $("#exampleModal11").modal('hide');
+            $('#exampleModal11').modal({
+                keyboard: false,
+                backdrop: false
+            })
+            $("#exampleModal11").addClass("d-none")
+            $("#exampleModal1").modal('show');
+            $("form").removeData("validator");
+            $("form").removeData("unobtrusiveValidation");
+            $.validator.unobtrusive.parse("form");
+        }
+
+        function closeform() {
+            if ($('form').valid()) {
+                $("#exampleModal1").modal('hide');
+                location.reload();
+            }
+            else {
+                openform();
+            }
+        }
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+
+
+
+        var mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

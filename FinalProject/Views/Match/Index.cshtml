@@ -1,0 +1,124 @@
+﻿@model List<Match>
+@{
+    ViewBag.Title = "Matches";
+}
+
+
+
+    <section class="AddTeam">
+        <div class="container">
+
+            <h1 class=" text-center font-weight-bold text-uppercase">Matches</h1>
+            @Html.ActionLink("Add Match", "AddMatch", null, new { @class = "btn btn-info my-1 px-3 " })
+
+            @Html.ActionLink("Deleted Match", "UnVisibleMatch", null, new { @class = "btn btn-info my-1 px-3 " })
+
+            <table class="table table-hover">
+                <thead class="">
+                    <tr class="font-weight-bold text-center">
+                        <td>HomeTeam</td>
+                        <td>Guest Team</td>
+                        <td>Staduim Name</td>
+                        <td>Match Date</td>
+                        <td>Match Time</td>
+                        <td>Active</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        <tr class="text-center match">
+                            <td>@Html.DisplayFor(a => item.HomeTeam.teamName)</td>
+                            <td>@Html.DisplayFor(a => item.GuestTeam.teamName)</td>
+                            <td>@Html.DisplayFor(a => item.Staduim.staduimName)</td>
+                            <td>@item.matchDate.Date.ToString("yyyy-MM-dd")</td>
+                            <td>@Html.DisplayFor(a => item.matchTime)</td>
+                            <td><i class="fa fa-check text-muted ml-3"></i></td>
+                            <td>
+                                @Html.ActionLink("Delete", "DeleteMatch", new { id = item.matchID }, new { @class = "btn btn-danger m-1 px-3 " })
+                                @Html.ActionLink("Edit", "EditMatch", new { id = item.matchID }, new { @class = "btn btn-info m-1 px-3 " })
+                                @Html.ActionLink("Details", "MatchDetails", new { id = item.matchID }, new { @class = "btn btn-info m-1 px-3 " })
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        <ul id="pagin"><span class="noSpan">No. Of page</span></ul>
+    </section>
+@section scripts{
+    <script>
+        pageSize = 5;
+        var pageCount = $(".match").length / pageSize;
+
+        for (var i = 0; i < pageCount; i++) {
+
+            $("#pagin").append('<li><a href="#">' + (i + 1) + '</a></li> ');
+}
+        /**/
+        /**/
+        $("#pagin li").first().find("a").addClass("current")
+        showPage = function (page) {
+            $(".match").hide();
+            $(".match").each(function (n) {
+                if (n >= pageSize * (page - 1) && n < pageSize * page)
+                    $(this).show();
+            });
+        }
+
+        showPage(1);
+
+        $("#pagin li a").click(function () {
+            $("#pagin li a").removeClass("current");
+            $(this).addClass("current");
+            showPage(parseInt($(this).text()))
+        });
+    </script>
+}
+
+
+
+
+
+@*<section class="container">
+
+    <h2 class="text-center mt-5">Index</h2>
+        @Html.ActionLink("Add Match", "AddMatch")
+        <table class="table table-hover table-bordered ">
+            <thead>
+                <tr class="font-weight-bold">
+                    <td>HomeTeam</td>
+                    <td>Guest Team</td>
+                    <td>Staduim Name</td>
+                    <td>Match Date</td>
+                    <td>Match Time</td>
+                    <td>Visible To The User</td>
+                    <td>#</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(a => item.HomeTeam.teamName)</td>
+                        <td>@Html.DisplayFor(a => item.GuestTeam.teamName)</td>
+                        <td>@Html.DisplayFor(a => item.Staduim.staduimName)</td>
+                        <td>@item.matchDate.Date.ToString("yyyy-MM-dd")</td>
+                        <td>@Html.DisplayFor(a => item.matchTime)</td>
+                        <td><i class="fa fa-check text-muted ml-3"></i></td>
+                        <td>
+                            @Html.ActionLink("Make Un visible", "DeleteMatch", new { id = item.matchID }) |
+                        @Html.ActionLink("Edit", "EditMatch", new { id = item.matchID }) |
+                        @Html.ActionLink("Details", "MatchDetails", new { id = item.matchID })
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        @Html.ActionLink("Go To Un Visible Match", "UnVisibleMatch")
+    </section>*@

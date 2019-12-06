@@ -1,0 +1,119 @@
+﻿@model IEnumerable<FinalProject.Models.TicketyModel.Staduim>
+
+@{
+    ViewBag.Title = "Stadium";
+}
+
+<h2>Index</h2>
+
+<section class="StadiumSec">
+    <div class="container">
+        <div>
+            <h3>Staduim</h3>
+        </div>
+        <div class="row stdpage">
+
+            <table id="staduim_table" class="table table-responsive table-hover lead">
+                <thead>
+                    <tr>
+                        <th class="w-25">Staduim Name</th>
+                        <th class="w-25">City</th>
+                        <th class="w-25">Location</th>
+                        @if (User.IsInRole("Admin") || User.IsInRole("MasterAdmin"))
+                        {
+                            <th class="w-25">Active</th>
+                            <th class="w-25">Operation</th>
+
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (item.isValid == true)
+                        {
+                            <tr class="table-light">
+                                <td class="w-25 ">@item.staduimName</td>
+                                <td class="w-25">@item.city</td>
+                                <td class="w-25"><a href="@item.staduimLocation"><img src="~/img/map-icon.png" /></a></td>
+                                @if (User.IsInRole("Admin") || User.IsInRole("MasterAdmin"))
+                                {
+                                    <td class="w-25">@item.isValid</td>
+                                    <td class="w-25">
+                                        @Html.ActionLink("Delete", "OperationStaduim", "AdminStaduim", new { id = item.staduimID }, new { @class = "btn btn-danger", onclick = "return confirm('are you sure You Want To Delete? ')" })
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    }
+
+
+                    @if (User.IsInRole("Admin") || User.IsInRole("MasterAdmin"))
+                    {
+                        foreach (var notvaliditem in Model)
+                        {
+                            if (notvaliditem.isValid == false)
+                            {
+                                <tr class="table-light">
+                                    <td class="w-25">@notvaliditem.staduimName</td>
+                                    <td class="w-25">@notvaliditem.city</td>
+                                    <td class="w-25"><a href="@notvaliditem.staduimLocation"><img src="~/img/map-icon.png" /></a></td>
+                                    <td class="w-25">@notvaliditem.isValid</td>
+                                    <td class="w-25">
+                                        @Html.ActionLink("Active", "OperationStaduim", "AdminStaduim", new { id = notvaliditem.staduimID }, new { @class = "btn btn-danger activeBtn", onclick = "return confirm('are you sure You Want To Active? ')" })
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+@if (User.IsInRole("Admin") || User.IsInRole("MasterAdmin"))
+{
+    <div class="addStadium">
+        <button id="addStaduim" class="btn-lg btnAdd" data-toggle="modal" data-target="#AddStadium">
+            @Ajax.ActionLink("Add Stadium", "CreateStaduim", "AdminStaduim", null,
+    new AjaxOptions()
+    {
+    UpdateTargetId = "addstu",
+    InsertionMode = InsertionMode.Replace
+    }
+    , new { @class = "btn-lg btnAdd rounded" })
+        </button>
+
+        <div class="modal fade small text-center stdModal" id="AddStadium" tabindex="-1" role="dialog" aria-labelledby="AddStadiumTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content text-center">
+                    <div class="modal-header text-center editModel">
+                        <h5 class="modal-title text-center" id="AddStadiumTitle">ِAdd Stadium</h5>
+                        <button type="button" id="AddStdBtn" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body AddStdModel">
+                        <div id="addstu"></div>
+                    </div>
+                    <div class="modal-footer editModel">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section scripts{
+    <script src="~/Scripts/dataTable.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap4.js"></script>
+    <script>
+        $('#staduim_table').DataTable();
+
+        $('.dataTables_length').addClass('bs-select');
+    </script>
+}

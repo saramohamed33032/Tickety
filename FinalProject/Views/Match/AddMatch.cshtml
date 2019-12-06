@@ -1,0 +1,139 @@
+﻿@model Match
+@{
+    ViewBag.Title = "AddMatch";
+}
+
+
+
+<section class="AddTeam ">
+    <div class="container">
+        <div>
+            <h1 class=" text-center font-weight-bold text-uppercase">Add New Match</h1>
+
+        </div>
+        <div class="col-6 offset-3 mt-5">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    <div class="form-group col-12 mt-2">
+                        @Html.LabelFor(a => a.HomeTeamId, "Home Team", htmlAttributes: new { @class = "control-label " })
+                        @Html.DropDownList("HomeTeamId", null, htmlAttributes: new { @class = "form-control col-12" })
+                        @Html.ValidationMessageFor(a => a.HomeTeamId, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-12 mt-2">
+                        @Html.LabelFor(a => a.GuestTeamId, "Guest Team", htmlAttributes: new { @class = "control-label " })
+                        @Html.DropDownList("GuestTeamId", null, htmlAttributes: new { @class = "form-control col-12" })
+                        @Html.ValidationMessageFor(a => a.GuestTeamId, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-12 mt-2">
+                        @Html.LabelFor(a => a.staduimID, "Staduim Name", htmlAttributes: new { @class = "control-label " })
+                        @Html.DropDownList("staduimID", null, htmlAttributes: new { @class = "form-control col-12" })
+                        @Html.ValidationMessageFor(a => a.staduimID, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-12 mt-2">
+                        @Html.LabelFor(a => a.matchDate, "Match Date", htmlAttributes: new { @class = "control-label", id="date" })
+                        <input type="date" name="matchDate" class="form-control col-12" />
+                        @Html.ValidationMessageFor(a => a.matchDate, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-12 mt-2">
+                       @Html.LabelFor(a => a.matchTime, "Match Time", htmlAttributes: new { @class = "control-label", id="time"  })
+                    <input type="time" name="matchTime" class="form-control col-12" />
+                    @Html.ValidationMessageFor(a => a.matchTime, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-12 mt-2">
+                        <button type="button" class="btn btn-info px-5 m-1" id="btn">Add</button>
+                        @Html.ActionLink("Return To Matches", "Index",null, new { @class = " btn btn-info px-2 m-1" })
+
+
+                        @ViewBag.msg
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add Degrees</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <h3> <span class="badge badge-info">Class A</span></h3>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="PriceA">Price</label>
+                                            <input type="number" name="PriceA" class="form-control" id="PriceA" placeholder="Price" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="NoA">Number Of Seat</label>
+                                            <input type="number" name="NoA" class="form-control" id="NoA" placeholder="Number Of Seat" required>
+                                        </div>
+                                    </div>
+                                    <h3> <span class="badge badge-info">Class B</span></h3>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="PriceB">Price</label>
+                                            <input type="number" name="PriceB" class="form-control" id="PriceB" placeholder="Price" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="NoB">Number Of Seat</label>
+                                            <input type="number" name="NoB" class="form-control" id="NoB" placeholder="Number Of Seat" required>
+                                        </div>
+                                    </div>
+                                    <h3> <span class="badge badge-info">Class C</span></h3>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="PriceC">Price</label>
+                                            <input type="number" name="PriceC" class="form-control" id="PriceC" placeholder="Price" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="NoC">Number Of Seat</label>
+                                            <input type="number" name="NoC" class="form-control" id="NoC" placeholder="Number Of Seat" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    @*<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*@
+                                    <button type="submit" class="btn btn-primary ">Save </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+            }
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+@section scripts
+    {
+    <script>
+        $("#btn").click(function () {
+        $('#exampleModal').modal({ backdrop: 'static', keyboard: false })
+      
+        })
+    </script>
+    }

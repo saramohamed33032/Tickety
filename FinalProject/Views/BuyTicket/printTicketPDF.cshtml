@@ -1,0 +1,51 @@
+﻿@model Ticket
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title>printTicketPDF</title>
+</head>
+<body>
+    <section class="userTicketPdfSec">
+        <div class="container userTicket">
+            <div class="row" id="print">
+                <div class="col-4">
+                    <img class="mt-5 ml-3" src=@System.Web.Hosting.HostingEnvironment.MapPath("~/images/ball.jpg") />
+                </div>
+                <div class="col-2"></div>
+                <div class="col-5 TicketContent">
+                    @*stadium Name*@
+                    <h3 class="mt-3 mb-2 ml-5 ">@Model.Degree.Match.Staduim.staduimName</h3>
+                    <div class="mt-3">
+                        @*team1 Name*@
+                        <span class="mr-5 ">@Model.Degree.Match.HomeTeam.teamName</span>
+                        @*team2 Name*@
+                        <span class="ml-4 ">@Model.Degree.Match.GuestTeam.teamName</span>
+                    </div>
+                    <div class="mt-3">
+                        @*Date*@
+                        <span class="mr-5 ">@Model.Degree.Match.matchDate.Date.ToString("yyyy-MM-dd")</span>
+                        @*Time*@
+                        <span class="ml-5 ">@Model.Degree.Match.matchTime</span>
+                    </div>
+                    <hr />
+                    <label>SEAT: @Model.Seat_Number </label><span class="mr-5">@*Seat Number*@</span>
+                    <label class="ml-5 ">Price: @Model.Degree.degreePrice </label><span>@*Price*@</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
+
+

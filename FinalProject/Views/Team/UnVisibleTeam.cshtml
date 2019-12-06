@@ -1,0 +1,40 @@
+﻿@model List<Team>
+@{
+    ViewBag.Title = "Un Visible Team";
+}
+
+
+
+
+<section class="AddTeam">
+    <div class="container">
+
+        <h1 class=" text-center font-weight-bold text-uppercase">UnVisibleTeam</h1>
+
+       @Html.ActionLink("Active Team", "Index", null, new { @class = "btn btn-info m-3 px-3 " })
+       
+        <table class="table table-hover  ">
+            <thead class="">
+                <tr class="font-weight-bold text-center">
+                    <td>Team Name</td>
+                    <td>Team Logo</td>
+                    <td>Active</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+            {
+                    <tr class="text-center">
+                        <td>@Html.DisplayFor(a => item.teamName)</td>
+                        <td><img src="~/img/@item.teamLogo" style="height:5rem" /></td>
+                        <td> <i class="fas fa-times"></i></td>
+                        <td>@Html.ActionLink("Active", "DeleteTeam", new { id = item.teamID }, new { @class = "btn btn-info m-3 px-3 " })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</section>
